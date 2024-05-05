@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1, 
+        "name": "Default", 
+        "className": "default",
+        "isEditable": false,
+        "isDeletable": false,
+        "order": 1
+    },
+    {
+        "id": 2, 
+        "name": "Game", 
+        "className": "game",
+        "isEditable": false,
+        "isDeletable": false,
+        "order": 2
+    },
+    {
+        "id": 3, 
+        "name": "Movie", 
+        "className": "movie",
+        "isEditable": false,
+        "isDeletable": false,
+        "order": 3
+    },
+    {
+        "id": 4, 
+        "name": "Music", 
+        "className": "music",
+        "isEditable": false,
+        "isDeletable": false,
+        "order": 4
+    }
+]

@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+/**
+ * 
+ * App
+ * @author - NA 
+ * @date - 5th May, 2024
+ * 
+ */
+// GENERIC IMPORT
+import { Provider } from 'react-redux';
+
+// USER LEVEL IMPORT
+import HomePage from './view/pages/home';
+import store from './redux/store';
+
+// STYLE
+import './app.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className='app'>
+        <HomePage />
+      </div>
+    </Provider>
   );
 }
 

@@ -1,0 +1,14 @@
+/**
+ * 
+ * Home style
+ * @author - NA 
+ * @date - 5th May, 2024
+ * 
+ */
+.profile-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    min-height: 640px;
+    max-height: 640px;
+}

@@ -1,0 +1,51 @@
+/**
+ * 
+ * MODAL STYLE
+ * @author - NA 
+ * @date - 5th May, 2024
+ * 
+ */
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 300px;
+    box-sizing: border-box;
+    background-color: #111;
+    border: 1px solid #c8323c;
+    border-radius: 3px;
+    box-shadow: 0px 6px 10px 0px #00000033;
+    padding: 20px;
+    left: 148px;
+    top: 269px;
+    transition: visibility 0s, opacity 0.3s linear;
+}
+.modal-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #c8323c;
+    text-align: center;
+    line-height: 17px;
+}
+.modal-body-text {
+    margin: 10px;
+}
+.delete-btn {
+    height: 27px;
+    width: auto;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 17px;
+    background-color: #c8323c;
+    padding: 4px 0;
+    min-width: 90px;
+    border: 1px solid #0000004d;
+    text-transform: uppercase;
+}
+.delete-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

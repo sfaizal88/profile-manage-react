@@ -1,0 +1,158 @@
+/**
+ * 
+ * Profile listing style
+ * @author - NA 
+ * @date - 5th May, 2024
+ * 
+ */
+.profile-list-container {
+    width: 240px;
+    max-width: 240px;
+    padding: 20px;
+    background-color: #111;
+    flex: auto;
+    box-sizing: border-box;
+}
+.main-title {
+    color: #44d62c;
+    font-family: 'RazerF5';
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+    max-height: 24px;
+    margin-bottom: 20px;
+}
+.profile-box {
+    border: 1px solid #5d5d5d;
+    width: 200px;
+    max-height: 220px;
+    height: 220px;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 1.25rem;
+    box-sizing: border-box;
+}
+.profile-list {
+    max-height: 189px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.profile-item {
+    max-height: 30px;
+    height: 20px;
+    border: none;
+    text-transform: capitalize;
+    padding: 5px 10px 5px 36px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    will-change: color, background-color;
+    transition: color .2s, background-color .2s;
+}
+.profile-item.active {
+    color: #44d62c;
+}
+.profile-item:hover {
+    cursor: pointer;
+    background-color: #ffffff1a;
+}
+.profile-item::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 10px;
+    background-position: center;
+}
+.profile-item.default::before {
+    background-image: url(../../../../../assets/images/icon_profiles_default.svg);
+}
+.profile-item.default.active::before {
+    background-image: url(../../../../../assets/images/profile_sel_default.svg);
+}
+.profile-item.game::before {
+    background-image: url(../../../../../assets/images/icon_profiles_game.svg);
+}
+.profile-item.game.active::before {
+    background-image: url(../../../../../assets/images/profile_sel_game.svg);
+}
+.profile-item.movie::before {
+    background-image: url(../../../../../assets/images/icon_profiles_movie.svg);
+}
+.profile-item.movie.active::before {
+    background-image: url(../../../../../assets/images/profile_sel_movie.svg);
+}
+.profile-item.music::before {
+    background-image: url(../../../../../assets/images/icon_profiles_music.svg);
+}
+.profile-item.music.active::before {
+    background-image: url(../../../../../assets/images/profile_sel_music.svg);
+}
+.toolbar {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 29px;
+    background-color: #222;
+    border-top: 1px solid #707070;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.toolbar > .icon {
+    will-change: opacity;
+    transition: opacity 0.3s linear;
+    height: 28px;
+    width: 28px;
+    max-width: 28px;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.toolbar > .icon:hover {
+    background-color: #ffffff1a;
+    cursor: pointer;
+}
+.toolbar > .icon.disabled {
+    background-color: transparent;
+    cursor: default;
+    opacity: 0.3;
+}
+.toolbar > .icon.up {
+    background-image: url(../../../../../assets/images/icon_arrow_up.svg);
+    position: absolute;
+    left: 0;
+}
+.toolbar > .icon.down {
+    background-image: url(../../../../../assets/images/icon_arrow_down.svg);
+    position: absolute;
+    left: 30px;
+}
+.toolbar > .icon.add {
+    background-image: url(../../../../../assets/images/icon_plus.svg);
+}
+.toolbar > .icon.delete {
+    background-image: url(../../../../../assets/images/icon_delete.svg);
+}
+.toolbar > .icon.edit {
+    background-image: url(../../../../../assets/images/icon_edit.svg);
+}
+.input-field, .input-field:focus {
+    width: 100%;
+    border: 1px solid #44d62c;
+    box-sizing: border-box;
+    background-color: #111;
+    padding: 3px 10px 3px 5px;
+    color: #ccc;
+    font-family: 'Roboto', sans-serif;
+    height: 30px;
+    margin: -5px 0;
+}
