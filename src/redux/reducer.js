@@ -65,7 +65,7 @@ const profileReducer = (state = initialState, action) => {
         // WHEN USER TOGGLE BETWEEN EDIT MODE
         case ActionTypes.ON_UPDATE_EDIT_MODE:
             // PULL THE PROFILE LIST
-            const updatedList = state.list;
+            const updatedList = state.list.map(item => ({...item, name: item.name.trim()}));
             // FINDING THE SELECTED PROFILE ORDER NO
             const selectedProfileOrder = state.selectedProfile.order;
             // FINDING THE SEELCTED PROFILE NAME
