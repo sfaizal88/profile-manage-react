@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/profile-manage-react/static/css/main.0a82b3bd.css",
-    "main.js": "/profile-manage-react/static/js/main.d8f52784.js",
+    "main.js": "/profile-manage-react/static/js/main.0735d398.js",
     "static/js/453.d8581f64.chunk.js": "/profile-manage-react/static/js/453.d8581f64.chunk.js",
     "static/media/RazerF5.svg": "/profile-manage-react/static/media/RazerF5.6f439136e85234a3168f.svg",
     "static/media/RazerF5Light.svg": "/profile-manage-react/static/media/RazerF5Light.d9c4f2ea70beda422301.svg",
@@ -30,11 +30,11 @@
     "static/media/icon_edit.svg": "/profile-manage-react/static/media/icon_edit.afbd88e36b46f47a1f7c.svg",
     "static/media/icon_plus.svg": "/profile-manage-react/static/media/icon_plus.e7e91414e109dadc0a96.svg",
     "main.0a82b3bd.css.map": "/profile-manage-react/static/css/main.0a82b3bd.css.map",
-    "main.d8f52784.js.map": "/profile-manage-react/static/js/main.d8f52784.js.map",
+    "main.0735d398.js.map": "/profile-manage-react/static/js/main.0735d398.js.map",
     "453.d8581f64.chunk.js.map": "/profile-manage-react/static/js/453.d8581f64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a82b3bd.css",
-    "static/js/main.d8f52784.js"
+    "static/js/main.0735d398.js"
   ]
 }
