@@ -174,6 +174,21 @@ export function useHook(
         }});
     }
 
+    // TRIGGER WHEN USER RENAME, DELETE OR ADD
+    // SCROLLBAE WILL BE AUTO-MATICALLY SCROLLED TO THAT SPECIIFIC PROFILE
+    const scrollToProfile = (childId, scrollableDivRef) => {
+        // GETTING THE PARENT REF
+        const parent = scrollableDivRef.current;
+        // GETTING THE CHILD TAG
+        const child = parent.querySelector(`#profile-${childId}`);
+    
+        // CHECKING WHETHER CHILD EXISTS
+        if (child) {
+          // SCROLL TO THE TOP OF THE CHILD ELEMENT
+          parent.scrollTop = child.offsetTop;
+        }
+    };
+
     return {
         onUpOrder,
         onDownOrder,
@@ -182,6 +197,7 @@ export function useHook(
         onDelete,
         onUpdatedSelectedProfile,
         editModeHandler,
-        onUpdateDeleteModal
+        onUpdateDeleteModal,
+        scrollToProfile
     }
 }

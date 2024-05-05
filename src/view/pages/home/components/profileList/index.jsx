@@ -42,7 +42,8 @@ const ProfileList = (props) => {
         onDelete,
         onUpdatedSelectedProfile,
         editModeHandler,
-        onUpdateDeleteModal
+        onUpdateDeleteModal,
+        scrollToProfile
     } = useHook(selectedProfile, list, isEditMode, dispatch);
 
     // USE EFFECT WILL BE TRIGGERED 
@@ -77,6 +78,8 @@ const ProfileList = (props) => {
     // USEEFFECT CREATE FOR THE BELOW POINTS
     // WHEN USER TRY TO ADD NEW ITEM, SCOLLBAR WILL BE SCROLLED TO THE BOTTOM
     useEffect(() => {
+        // SCROLLED TO THAT SPECIFIC CHILD TAG WHEN ACTION CHANGED
+        scrollToProfile(selectedProfile.id, scrollableDivRef)
         if (scrollableDivRef.current && currentAction === 'ADD') {
             scrollableDivRef.current.scrollTop = scrollableDivRef.current.scrollHeight
         }
@@ -89,7 +92,7 @@ const ProfileList = (props) => {
             <div className='profile-box'>
                 <div className='profile-list' ref={scrollableDivRef}>
                     {list.map((item, index) => (
-                        <div key={`profile-${index}`} onClick={() => onUpdatedSelectedProfile(item)} className={['profile-item', item.className, selectedProfile.id === item.id && 'active'].join(' ')}>
+                        <div id={`profile-${item.id}`} key={`profile-${index}`} onClick={() => onUpdatedSelectedProfile(item)} className={['profile-item', item.className, selectedProfile.id === item.id && 'active'].join(' ')}>
                             {selectedProfile.id === item.id && isEditMode ? <input ref={inputRef} className='input-field' value={item.name} onChange={(event) => onRename(event.target.value)}/> : item.name}
                         </div>
                     ))}
